@@ -3,9 +3,17 @@ import React, { Fragment } from 'react';
 import DotsSvg from '../DotsSvg';
 
 const Button = ({ isDark }) => {
+  const buttonBgStyles = isDark
+    ? 'bg-black border-black'
+    : 'bg-[#f0f0f0] border-[#e3e3e3]';
+
+  const buttonDotsStyles = isDark ? 'text-white' : 'text-black';
+
   return (
-    <button className='w-[40px] h-[40px] bg-[#f0f0f0] hover:bg-[#ebebeb] transition-all duration-[150ms] rounded-full flex items-center justify-center border-[1px] border-[#e3e3e3]'>
-      <DotsSvg className='align-middle text-black' />
+    <button
+      className={`w-[40px] h-[40px]  hover:opacity-75 transition-all duration-[150ms] rounded-full flex items-center justify-center border-[1px] ${buttonBgStyles}`}
+    >
+      <DotsSvg className={`align-middle ${buttonDotsStyles}`} />
     </button>
   );
 };
@@ -33,7 +41,7 @@ const Header = ({ isShowing }) => {
         className={`fixed w-[calc(100%-24px)] left-0 right-0 mx-auto my-[8px] py-[8px] px-[12px] z-10 top-0 flex flex-row-reverse items-center justify-between rounded-[72px] border-[1px] ${activeHeaderStyles}`}
       >
         {/* Botton */}
-        <Button />
+        <Button isDark={isShowing} />
         <div>
           <p className={`font-semibold ${activeHeaderItemStyles}`}>
             @isakanderson

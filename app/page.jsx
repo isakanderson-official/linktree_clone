@@ -3,9 +3,11 @@ import React, { useEffect, useState } from 'react';
 import CustomButton from '../components/CustomButton';
 import DotsSvg from '../components/DotsSvg';
 import Header from '../components/Header';
+import MobileModal from '../components/MobileModal';
 
 const HomePage = () => {
   const [scrollTop, setScrollTop] = useState(0);
+  const [showMobileModal, setShowMobileModal] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,7 +25,10 @@ const HomePage = () => {
   return (
     <>
       {/* Header Top Bar */}
-      <Header isShowing={showHeader} />
+      <Header
+        isShowing={showHeader}
+        onButtonClick={() => setShowMobileModal(true)}
+      />
       {/* End Top Bar */}
 
       {/* Base Styles */}
@@ -61,6 +66,10 @@ const HomePage = () => {
             </div>
           </div>
         </div>
+        {/* Social Modal */}
+        {showMobileModal && (
+          <MobileModal closeModal={() => setShowMobileModal(false)} />
+        )}
       </div>
     </>
   );

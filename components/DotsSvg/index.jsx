@@ -6,7 +6,7 @@ function DotsSvg(props) {
       width='16'
       height='16'
       viewBox='0 0 16 16'
-      enable-background='new 0 0 24 24'
+      enableBackground='new 0 0 24 24'
       {...props}
     >
       <path

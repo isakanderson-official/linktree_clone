@@ -5,7 +5,7 @@ import ShareItem from '../ShareItem';
 
 const SocialOptions = ({ showSocialOptions, toggleSocialOptions }) => {
   return (
-    <>
+    <div className=''>
       {!showSocialOptions && (
         <ShareItem
           Icon={ShareIcon}
@@ -15,15 +15,17 @@ const SocialOptions = ({ showSocialOptions, toggleSocialOptions }) => {
       )}
       {showSocialOptions && (
         <>
-          <ShareItem Icon={ShareIcon} text={'Share on Facebook'} />
-          <ShareItem Icon={ShareIcon} text={'Share on LinkedIn'} />
-          <ShareItem Icon={ShareIcon} text={'Share on Twitter'} />
-          <ShareItem Icon={ShareIcon} text={'Share via WhatsApp'} />
-          <ShareItem Icon={ShareIcon} text={'Share via Email'} />
-          <LinkCopyFooter />
+          <div className='mb-2'>
+            <ShareItem Icon={ShareIcon} text={'Share on Facebook'} />
+            <ShareItem Icon={ShareIcon} text={'Share on LinkedIn'} />
+            <ShareItem Icon={ShareIcon} text={'Share on Twitter'} />
+            <ShareItem Icon={ShareIcon} text={'Share via WhatsApp'} />
+            <ShareItem Icon={ShareIcon} text={'Share via Email'} />
+          </div>
+          <LinkCopyFooter className={''} />
         </>
       )}
-    </>
+    </div>
   );
 };
 

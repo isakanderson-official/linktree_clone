@@ -6,11 +6,7 @@ const LinksSection = () => {
   return (
     <div className='mt-[32px] w-full flex flex-col gap-4'>
       {links.map((link) => {
-        return (
-          <CustomButton key={link.title} link={link.link}>
-            {link.title}
-          </CustomButton>
-        );
+        return <CustomButton key={link.title} data={link} />;
       })}
 
       {/* <CustomButton>Instagram</CustomButton>

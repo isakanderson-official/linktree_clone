@@ -1,7 +1,8 @@
 import { ShareIcon } from '@heroicons/react/24/outline';
 import React from 'react';
 
-const CustomButton = ({ children, link }) => {
+const CustomButton = ({ data }) => {
+  const { title, tags, link, description, iconType, icon } = data;
   return (
     <a href={link || '#'} target={'_blank'}>
       <button className='bg-slate-900 text-white rounded-[14px] w-full h-[74px] cursor-pointer break-all sm:break-words hover:scale-105 transition-all flex group relative shadow-md hover:shadow-gray-400/90 p-2 gap-2'>
@@ -21,25 +22,12 @@ const CustomButton = ({ children, link }) => {
         {/* Content box */}
         <div className='flex-1 flex-col h-full text-left w-[200px]  border-gray-200'>
           {/* Title */}
-          <h3 className='font-semibold text-[12px] leading-0'>{children}</h3>
+          <h3 className='font-semibold text-[12px] leading-0'>{title}</h3>
           {/* Description */}
-          <p className='text-[10px] break-normal line-clamp-2'>
-            simply dummy text of the printing and typesetting industry. Lorem
-            Ipsum has been the industry's standard dummy text ever since the
-            1500s, when an unknown printer took a galley of type and scrambled
-            it to make a type specimen book. It has survived not only five
-            centuries, but also the leap into electronic typesetting, remaining
-            essentially unchanged.
-          </p>
+          <p className='text-[10px] break-normal line-clamp-2'>{description}</p>
           {/* Tags */}
-          <p className='text-[8px] leading-0'>YouTube - Nextjs - React</p>
+          <p className='text-[8px] leading-0'>{tags.join(' - ')}</p>
         </div>
-        {/* <p className='leading-[1.5] w-full font-medium text-[14px] md:text-[16px] px-[44px] py-[16px]'>
-          {children}
-        </p>
-        <div className='opacity-0 group-hover:opacity-100 absolute hover:bg-slate-700 transition-all rounded-full right-3 p-3'>
-          <ShareIcon className='w-4 h-4' />
-        </div> */}
       </button>
     </a>
   );

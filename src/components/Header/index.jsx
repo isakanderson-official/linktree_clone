@@ -42,7 +42,7 @@ const Header = ({ isShowing, onButtonClick }) => {
 
         <div>
           <p className={`font-semibold ${activeHeaderItemStyles}`}>
-            @isakanderson
+            Isak Anderson
           </p>
         </div>
         <div className='max-w-[44px] max-h-[44px]'>

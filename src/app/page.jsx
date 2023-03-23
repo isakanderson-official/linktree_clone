@@ -5,6 +5,10 @@ import MobileModal from '../components/MobileModal';
 import ProfileSection from '../components/ProfileSection';
 import LinksSection from '../components/LinksSection';
 import useScrolling from '../hooks/useScrolling.js';
+import {
+  AdjustmentsHorizontalIcon,
+  MagnifyingGlassIcon,
+} from '@heroicons/react/24/outline';
 
 const HomePage = () => {
   const [showMobileModal, setShowMobileModal] = useState(false);
@@ -29,6 +33,18 @@ const HomePage = () => {
         <main className='max-w-[680px] w-full h-full mx-auto'>
           {/* PROFILE SECTION */}
           <ProfileSection />
+
+          {/* SEARCH SECTION */}
+          <div className='flex items-center mt-4 gap-2'>
+            <div className='w-full flex items-center gap-2 bg-gray-100 rounded-md pl-2'>
+              <MagnifyingGlassIcon className='h-6 w-6' />
+              <input
+                placeholder='Search for links here'
+                className='w-full h-full bg-transparent p-2 outline-none'
+              />
+            </div>
+            <AdjustmentsHorizontalIcon className='w-6 h-6' />
+          </div>
 
           {/* LINKS SECTION */}
           <LinksSection />

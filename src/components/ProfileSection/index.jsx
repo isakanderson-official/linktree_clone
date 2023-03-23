@@ -2,26 +2,28 @@ import React from 'react';
 
 const ProfileSection = () => {
   return (
-    <div className='flex flex-col items-center w-full h-full cursor-default'>
+    <div className='flex items-center gap-4 w-full h-[100px] cursor-default p-1'>
       {/* Image */}
-      <div className='max-w-[96px] max-h-[96px]'>
-        <img
-          src={
-            'https://d1fdloi71mui9q.cloudfront.net/aobYU4TDSXOOdof3MYND_9TvbS17m6tobN8lY'
-          }
-          className={
-            'object-contain block rounded-full ring-2 ring-offset-2 ring-blue-600 hover:ring-blue-500 hover:scale-105 transition-all cursor-pointer'
-          }
-        />
+
+      <img
+        src={
+          'https://d1fdloi71mui9q.cloudfront.net/aobYU4TDSXOOdof3MYND_9TvbS17m6tobN8lY'
+        }
+        className={
+          'object-contain w-[100px] h-[100px] rounded-full ring-2 ring-offset-2 ring-blue-600 hover:ring-blue-500 hover:scale-105 transition-all cursor-pointer'
+        }
+      />
+
+      <div>
+        {/* Headline tag */}
+        <h1 className='font-bold text-12'>Isak Anderson</h1>
+        {/* Description */}
+        <p className='text-[11px] font-medium'>
+          Welcome to my links page. Below I have all the links to products /
+          services that I recommend. Feel free to use the search feature below
+          to quickly find what you are looking for. Enjoy 😀
+        </p>
       </div>
-      {/* Headline tag */}
-      <h1 className='font-bold text-[20px] mt-[16px] mx-[12px] max-w-full leading-[1.5] truncate '>
-        @isakanderson
-      </h1>
-      {/* Description */}
-      <p className='mt-[4px] text-center text-[14px] px-[40px] font-medium'>
-        Welcome! Below are links to my favorite resources!
-      </p>
     </div>
   );
 };

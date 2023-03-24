@@ -18,7 +18,7 @@ const ProfileSection = () => {
         {/* Headline tag */}
         <h1 className='font-bold text-12'>Isak Anderson</h1>
         {/* Description */}
-        <p className='text-[11px] font-medium'>
+        <p className='text-[11px] font-medium line-clamp-5'>
           Welcome to my links page. Below I have all the links to products /
           services that I recommend. Feel free to use the search feature below
           to quickly find what you are looking for. Enjoy 😀

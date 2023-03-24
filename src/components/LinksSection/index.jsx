@@ -1,11 +1,10 @@
 import React from 'react';
 import CustomButton from '../CustomButton';
-import links from '../../../links';
 
-const LinksSection = () => {
+const LinksSection = ({ data }) => {
   return (
     <div className='mt-[32px] w-full flex flex-col gap-4'>
-      {links.map((link) => {
+      {data.map((link) => {
         return <CustomButton key={link.title} data={link} />;
       })}
 

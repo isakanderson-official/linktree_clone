@@ -3,7 +3,12 @@ import {
   MagnifyingGlassIcon,
 } from '@heroicons/react/24/outline';
 import React from 'react';
+import FilterOptions from '../FilterOptions';
+import PopoverOptions from '../FilterOptions';
 export function SearchAndFilter({ originalData, setNewData }) {
+  // Gets unique tags
+  const allTags = [...new Set(originalData.flatMap((item) => item.tags))];
+
   // When someone types in the search activate this function
   const handleInput = (input) => {
     const text = input.target.value?.toLowerCase();
@@ -26,7 +31,7 @@ export function SearchAndFilter({ originalData, setNewData }) {
           onChange={handleInput}
         />
       </div>
-      <AdjustmentsHorizontalIcon className='w-6 h-6' />
+      <FilterOptions tags={allTags} />
     </div>
   );
 }

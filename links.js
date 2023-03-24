@@ -27,7 +27,7 @@ const links = [
   {
     title: 'My Air Fryer!!',
     link: 'https://amzn.to/3mLHz3V',
-    tags: ['Home', 'Amazon', 'Product'],
+    tags: ['Amazon', 'Product'],
     description: '',
     iconType: 'emoji',
     icon: '💰',

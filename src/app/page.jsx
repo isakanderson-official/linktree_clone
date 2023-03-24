@@ -8,6 +8,7 @@ import ProfileSection from '../components/ProfileSection';
 import LinksSection from '../components/LinksSection';
 import useScrolling from '../hooks/useScrolling.js';
 import linksFile from '../../links';
+import PopoverOptions from '../components/FilterOptions';
 
 const HomePage = () => {
   const [showMobileModal, setShowMobileModal] = useState(false);
